@@ -15,7 +15,7 @@ p {
 }
 
 .topnav {
-    background-color: #333;
+    background-color: #282a35;
     overflow: hidden;
 }
 
@@ -31,7 +31,7 @@ p {
 }
 
 .topnav a:hover {
-    background-color: #444;
+    background-color: #3c3e49;
     color: #e3e3e5;
 }
 
@@ -39,7 +39,28 @@ p {
     background-color: #04AA6D;
     color: white;
 }
+
+.topnav a.right {
+    float: right;
+}
+
+.topnav a.rounded {
+    background-color: purple;
+    padding: 8px 16px;
+    border-radius: 100px;
+    margin: 6px 4px;
+}
   
 .topnav .icon {
     display: none;
+}
+
+footer {
+    text-align: center;
+    padding: 5px;
+    background-color: darksalmon;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
