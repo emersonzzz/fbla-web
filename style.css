@@ -54,13 +54,3 @@ p {
 .topnav .icon {
     display: none;
 }
-
-footer {
-    text-align: center;
-    padding: 5px;
-    background-color: darksalmon;
-    color: white;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
