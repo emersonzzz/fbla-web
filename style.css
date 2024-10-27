@@ -14,12 +14,12 @@ body {
     padding: 0;
     height: 100%;
     font-weight: 400;
-    font-family: 'Raleway', sans-serif!important;
+    font-family: 'Montserrat', sans-serif!important;
     font-size: 14px;
     color: #ffffffb3;
     margin: 0 auto;
     scroll-behavior: smooth;
-    background-color: #282a35;
+    background-color: #1e1f22;
 }
 
 div {
@@ -194,4 +194,83 @@ ol, ul, menu {
     font-weight: 700;
     text-align: center;
     color: #000
+}
+
+#login-form {
+    align-items: center;
+    background-color: #313338;
+    margin: auto;
+    padding: 32px;
+    width: 300px;
+    justify-content: center;
+    top: 50%;
+    position: relative;
+    border-radius: .5rem;
+    transform: translateY(-50%);
+}
+
+#login-form h1 {
+    font-size: 23px;
+    font-weight: 500;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 0px;
+}
+
+#login-form h3 {
+    font-size: 20px;
+    font-weight: 200;
+    text-align: center;
+    color: #9195ab;
+    margin-top: 10px;
+}
+
+#login-form h5 {
+    font-size: 12px;
+    font-weight: 600;
+    text-align: left;
+    color: #9195ab;
+    margin-bottom: 5px;
+}
+
+#login-form input {
+    font-family: 'Montserrat', sans-serif;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: 200;
+    max-width: 100%;
+    width: 100%
+}
+
+#login-form a {
+    font-weight: 200;
+    text-decoration: none;
+    color: #78f099;
+    display: inline;
+}
+
+#login-form button {
+    border: none;
+    background-color: #28753d;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    color: #78f099;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: .5rem;
+    margin-bottom: 5px;
+}
+
+#login-form input {
+    background-color: #1e1f22;
+    border: none;
+    border-radius: .5rem;
+}
+
+#login-form h4 {
+    font-weight: 100;
+    text-align: left;
+    color: #9195ab;
+    display: inline;
 }
