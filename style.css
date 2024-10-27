@@ -19,7 +19,7 @@ body {
     color: #ffffffb3;
     margin: 0 auto;
     scroll-behavior: smooth;
-    background-color: #272934;
+    background-color: #282a35;
 }
 
 div {
@@ -150,4 +150,48 @@ ol, ul, menu {
 
 .signup-button:hover {
     background-color: #c70035;
+}
+
+.hero-section {
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+
+.hero-section h1 {
+    font-size: 70px;
+    font-weight: 700;
+    text-align: center;
+    color: #fff;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.hero-section h3 {
+    font-size: 23px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 30px;
+    color: #fff4a3
+}
+
+.hero-listings {
+    background-color: #f3ecea;
+    margin-top: -1;
+    padding-top: -1;
+}
+
+.hero-listings h1 {
+    font-size: 70px;
+    font-weight: 700;
+    text-align: center;
+    color: #000;
+    margin-top: 0px;
+    margin-bottom: 30px;
+}
+
+.hero-listings {
+    font-size: 23px;
+    font-weight: 700;
+    text-align: center;
+    color: #000
 }
