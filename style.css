@@ -156,6 +156,9 @@ ol, ul, menu {
     padding-top: 90px;
     padding-bottom: 90px;
     margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .hero-section h1 {
@@ -265,10 +268,11 @@ ol, ul, menu {
 
 #login-form input {
     font-family: 'Montserrat', sans-serif;
+    color: #fff;
     padding-left: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
-    font-weight: 200;
+    font-weight: 100;
     max-width: 100%;
     width: 100%;
 }
@@ -289,9 +293,11 @@ ol, ul, menu {
 
 #search-bar {
     padding: 10px;
-    margin: 10px 0;
-    width: 100%;
+    padding-left: 20px;
+    margin: 20px 0;
+    width: 400px;
     font-size: 16px;
+    margin-bottom: -20px;
 }
 
 #login-form button {
@@ -334,16 +340,47 @@ ol, ul, menu {
 
 #articles-list .article {
     background-color: #c70035;
-    margin-left: 128px;
-    margin-right: 128px;
-    margin-top: 10px;
-    margin-bottom: 10px;
     border-bottom: 1px solid #ccc;
     border-radius: 1rem;
-    padding: 20px;
+    width: 100%;
+    max-width: 216px;
     font-size: 18px;
+    color: #fff;
+    text-align: left;
+    padding: 20px;
+}
+
+#resources-section {
+    background-color: #f3ecea;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    box-sizing: border-box;
+    color: #1e1f22;
+    margin-top: -20px;
+    justify-content: center;
+    padding: 40px;
 }
 
 #articles-list {
-    background-color: #f3ecea;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(216px, 1fr));
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+    width: 100%;
+    max-width: 1240px;
+    margin: 57px auto 60px auto;
+    justify-items: center;
+}
+
+#resources-section a {
+    display: inline;
+}
+
+#resources-section h3 {
+    display: inline;
 }

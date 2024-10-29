@@ -9,16 +9,15 @@ document.addEventListener('DOMContentLoaded', function() {
 })
 
 function filterArticles() {
-    console.log('filtering articles')
-    const searchQuery = document.getElementById('search-bar').value.toLowerCase();
-    const articles = document.querySelectorAll('#article-list .article');
+    const input = document.getElementById("search-bar").value.toLowerCase();
+    const articles = document.querySelectorAll("#articles-list .article");
 
     articles.forEach(article => {
-        const articleText = article.textContent.toLowerCase();
-        if (articleText.includes(searchQuery)) {
-            article.style.display = '';
+        const text = article.textContent.toLowerCase();
+        if (text.includes(input)) {
+            article.style.display = "";
         } else {
-            article.style.display = 'none';
+            article.style.display = "none";
         }
-    })
+    });
 }
