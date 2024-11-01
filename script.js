@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('login-button').addEventListener('click', function() {
-        window.location.href = 'pages/login.html';
+        window.location.href = 'portal.html';
     })
 
     document.getElementById('signup-button').addEventListener('click', function() {
-        window.location.href = 'pages/signup.html';
+        window.location.href = 'register.html';
     })
 })
 
