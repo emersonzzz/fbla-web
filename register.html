@@ -43,7 +43,7 @@
                 </div>
             </div>
             <h1>MERGE INTO PORTAL.HTML AT SOME POINT</h1>
-            <form id="login-form" class="portal-forms" style="">
+            <form id="login-form" class="portal-forms">
                 <h1>Create an account</h1>
                 <h5>EMAIL</h5>
                 <input type="email" placeholder="" style="width: 100%; box-sizing: border-box;" required>
@@ -63,8 +63,24 @@
                     <input type="middle-initial" placeholder="" style="width:100px; margin-right: 0; display: inline-block; box-sizing: border-box;" required>
                 </div>
                 <div style="width: 100%; box-sizing: border-box;">
-                    <h5 style="margin-top: 5px">LAST NAME</h5>
+                    <h5 style="margin-top: 20px">LAST NAME</h5>
                     <input type="last-name" placeholder="" style="width: 100%; margin-top: 5px; margin-right: 0; box-sizing: border-box;" required>
+                </div>
+
+                <h5 style="margin: 0;">DATE OF BIRTH</h5><br>
+                <!--Birth Month-->
+                <div style="width: 30%; margin-right: 4%; box-sizing: border-box;">
+                    <input type="number" placeholder="MM" style="width: 100%; margin-top: 5px; box-sizing: border-box;" min="1" max="12" required>
+                </div>
+            
+                <!-- Birth Day -->
+                <div style="width: 30%; margin-right: 4%; box-sizing: border-box;">
+                    <input type="number" placeholder="DD" style="width: 100%; margin-top: 5px; box-sizing: border-box;" min="1" max="31" required>
+                </div>
+            
+                <!-- Birth Year -->
+                <div style="width: 30%; margin-right: 0; box-sizing: border-box;">
+                    <input type="number" placeholder="YYYY" style="width: 100%; margin-top: 5px; box-sizing: border-box;" min="1900" max="2100" required>
                 </div>
             </form>
             <!--<form id="register-credentials">
