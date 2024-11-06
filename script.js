@@ -21,3 +21,7 @@ function filterArticles() {
         }
     });
 }
+
+function checkCredentials() {
+    
+}
