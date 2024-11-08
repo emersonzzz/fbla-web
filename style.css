@@ -384,3 +384,26 @@ ol, ul, menu {
 #resources-section h3 {
     display: inline;
 }
+
+.contact-button {
+    background-color: #c70035;
+    border-bottom: 1px solid #ccc;
+    border-radius: 1rem;
+    width: 100%;
+    max-width: 255px;
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+#button-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    gap: 20px;
+}
+
+.contact-button h3 {
+    color: #9195ab;
+}
