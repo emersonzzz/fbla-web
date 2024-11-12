@@ -407,3 +407,97 @@ ol, ul, menu {
 .contact-button h3 {
     color: #9195ab;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#user-profile {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+#user-name {
+    font-family: 'Raleway', sans-serif; /* Use the same font */
+    font-size: 16px;                    /* Same font size as menu buttons */
+    font-weight: 600;                   /* Same font weight as menu buttons */
+    color: #9195ab;                        /* Same color as menu buttons */
+    margin-right: 10px;
+    cursor: pointer;                   
+}
+
+#dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    min-width: 150px;
+    z-index: 1000;
+}
+
+#dropdown-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#dropdown-menu ul li {
+    padding: 10px;
+}
+
+#dropdown-menu ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+#dropdown-menu ul li a:hover {
+    background-color: #f0f0f0;
+}
+
+/* Show the dropdown when hovering over the profile */
+#user-profile:hover #dropdown-menu {
+    display: block;
+}
+
+/* Hide login and signup buttons when logged in */
+#auth-buttons {
+    display: flex;
+}
+
+#login-button, #signup-button {
+    display: block;
+}
+
