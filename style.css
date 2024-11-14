@@ -437,6 +437,7 @@ ol, ul, menu {
     display: flex;
     align-items: center;
     cursor: pointer;
+    position: relative;
 }
 
 .profile-pic {
@@ -458,14 +459,18 @@ ol, ul, menu {
 #dropdown-menu {
     display: none;
     position: absolute;
-    top: 50px;
+    top: 41px;
     right: 0;
     background-color: #fff;
     border: 1px solid #ddd;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    border-radius: 5px;
+    border-radius: 1rem;
     min-width: 150px;
     z-index: 1000;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;                    /* Same font size as menu buttons */
+    font-weight: 600;                   /* Same font weight as menu buttons */
+    color: #9195ab;   
 }
 
 #dropdown-menu ul {
@@ -483,8 +488,9 @@ ol, ul, menu {
     color: #333;
 }
 
-#dropdown-menu ul li a:hover {
+#dropdown-menu ul li:hover {
     background-color: #f0f0f0;
+    border-radius: 1rem;
 }
 
 /* Show the dropdown when hovering over the profile */
@@ -501,3 +507,7 @@ ol, ul, menu {
     display: block;
 }
 
+.check-icon {
+    fill: #9195ab;
+    cursor: pointer;
+}
