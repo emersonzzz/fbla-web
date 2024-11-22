@@ -43,7 +43,7 @@
                 </div>
             </div>
             <h1>ADOPT REGISTER.HTML INTO ONE PAGE AT SOME POINT</h1>
-            <form id="login-form">
+            <form id="login-form" class="portal-forms">
                 <h1>Welcome back!</h1>
                 <h3>We are so happy to see you!</h3>
                 <h5>EMAIL</h5>
@@ -52,12 +52,71 @@
                 <input type="password" id="login-password" style="margin-bottom: 5px" placeholder="" required><br>
                 <a href="#forgot-password">Forgot password?</a><br>
                 <button type="submit">Login</button>
+                <h4 id="login-error" style="color: red"></h4>
                 <h4>Need an account? </h4><a href="register.html">Register</a>
             </form>
             <script>
-                document.getElementById('login-form').addEventListener('submit', function(event) {
-                    event.preventDefault();
-                })
+                const loginForm = document.getElementById('login-form');
+            const loginError = document.getElementById('login-error');
+
+            // Listen for form submission
+            loginForm.addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent form from reloading the page
+
+                const email = document.getElementById('login-email').value;
+                const password = document.getElementById('login-password').value;
+
+                // Example users list
+                const users = [
+                {
+        email: 'student@jobify.com',   // MAIN KEY
+        password: 'student1234',       // NEEDS TO BE HASHED
+        first: 'Emerson',              // FIRST NAME
+        middle: 'K',                   // MIDDLE INITIAL
+        last: 'Reinhard',              // LAST NAME
+        birthday: 703788000,           // SAVED AS UNIX TIMESTAMP
+        type: 0,                       // STUDENT
+        admin: false,                  // NOT ADMIN
+        verified: false                // EMAIL HAS NOT BEEN VERIFIED
+    },
+    {
+        email: 'employer@jobify.com',  // MAIN KEY
+        password: 'employer5678',      // NEEDS TO BE HASHED
+        first: 'Walmart',              // FIRST NAME
+        middle: '',                    // MIDDLE INITIAL
+        last: '',                      // LAST NAME
+        birthday: 484473600,           // SAVED AS UNIX TIMESTAMP
+        type: 1,                       // EMPLOYER
+        admin: false,                  // NOT ADMIN
+        verified: true                 // EMAIL HAS BEEN VERIFIED
+    },
+    {
+        email: 'counselor@jobify.com', // MAIN KEY
+        password: 'counselor90',       // NEEDS TO BE HASHED
+        first: 'Marena',               // FIRST NAME
+        middle: '',                    // MIDDLE INITIAL (OPTIONAL)
+        last: 'Crawford',              // LAST NAME
+        birthday: 315532800,           // SAVED AS UNIX TIMESTAMP
+        type: 2,                       // COUNSELOR
+        admin: true,                   // IS ADMIN
+        verified: true                 // EMAIL HAS BEEN VERIFIED
+    }
+                ];
+
+                // Search for the user by email
+                const user = users.find(u => u.email === email);
+
+                if (!user || user.password !== password) {
+                    loginError.textContent = "Invalid email or password.";
+                } else {
+                    // If login is successful, store email in localStorage
+                    localStorage.setItem('email', email);
+                    console.log(`saved as ${user.email} to local storage`)
+
+                    // Redirect user to home page
+                    window.location.href = "index.html";
+                }
+            });
             </script>
         </div>
     </body>

@@ -1,14 +1,91 @@
-document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('login-button').addEventListener('click', function() {
-        window.location.href = 'portal.html';
-    })
+const users = [
+    {
+        email: 'student@jobify.com',   // MAIN KEY
+        password: 'student1234',       // NEEDS TO BE HASHED
+        first: 'Emerson',              // FIRST NAME
+        middle: 'K',                   // MIDDLE INITIAL
+        last: 'Reinhard',              // LAST NAME
+        birthday: 703788000,           // SAVED AS UNIX TIMESTAMP
+        type: 0,                       // STUDENT
+        admin: false,                  // NOT ADMIN
+        verified: false                // EMAIL HAS NOT BEEN VERIFIED
+    },
+    {
+        email: 'employer@jobify.com',  // MAIN KEY
+        password: 'employer5678',      // NEEDS TO BE HASHED
+        first: 'Walmart',              // FIRST NAME
+        middle: '',                    // MIDDLE INITIAL
+        last: 'Fulton',                      // LAST NAME
+        birthday: 484473600,           // SAVED AS UNIX TIMESTAMP
+        type: 1,                       // EMPLOYER
+        admin: false,                  // NOT ADMIN
+        verified: true                 // EMAIL HAS BEEN VERIFIED
+    },
+    {
+        email: 'counselor@jobify.com', // MAIN KEY
+        password: 'counselor90',       // NEEDS TO BE HASHED
+        first: 'Marena',               // FIRST NAME
+        middle: '',                    // MIDDLE INITIAL (OPTIONAL)
+        last: 'Crawford',              // LAST NAME
+        birthday: 315532800,           // SAVED AS UNIX TIMESTAMP
+        type: 2,                       // COUNSELOR
+        admin: true,                   // IS ADMIN
+        verified: true                 // EMAIL HAS BEEN VERIFIED
+    }
+]
 
-    document.getElementById('signup-button').addEventListener('click', function() {
-        window.location.href = 'register.html';
-    })
+window.onload = function() {
+    const loggedInUser = localStorage.getItem('email')
+    if (loggedInUser) {
+        navbarShowProfile(loggedInUser)
+    } else {
+        navbarShowLogin()
+    }
+}
 
-    document.getElementById('')
-})
+function navbarShowLogin() {
+    document.getElementById('right-items').style.display = 'flex'
+    document.getElementById('user-profile').style.display = 'none'
+}
+
+function navbarShowProfile(email) {
+    const user = users.find(u => u.email === email)
+    document.getElementById('right-items').style.display = 'none'
+    document.getElementById('user-profile').style.display = 'flex'
+    document.getElementById('user-name').textContent = `${user.first} ${Array.from(user.last)[0]}.`
+}
+
+function handleLogin(event) {
+    event.preventDefault()
+    console.log('handleLogin')
+
+    const email = document.getElementById('login-email').value
+    const password = document.getElementById('login-password').value
+    const errorMsg = document.getElementById('login-error')
+
+    const user = users.find(u => u.email === email)
+
+    if (!user) {
+        errorMsg.textContent = "Invalid credentials"
+        return
+    }
+
+    if (user.password !== password) {
+        errorMsg.textContent = "Invalid credentials"
+        return
+    }
+
+    localStorage.setItem('email', email);
+
+    navbarShowProfile(email);
+
+    window.location.href = "index.html"
+}
+
+function logout() {
+    localStorage.removeItem('email')
+    window.location.href = 'index.html'
+}
 
 function filterArticles() {
     const input = document.getElementById("search-bar").value.toLowerCase();
@@ -24,39 +101,30 @@ function filterArticles() {
     });
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-    // Simulated users (hardcoded for now)
-    const users = {
-        "counselor@jobify.com": { password: "randolph85*", type: "counselor" },
-        "employer@jobify.com": { password: "mcdonaldsfat42!", type: "employer" },
-        "student@jobify.com": { password: "thunderbirds79*", type: "student" }
-    };
+function securityCheck() {
+    const accountType = getUserAccountType();
+    const consoleContent = document.getElementById("hero-section")
 
-    const loginForm = document.getElementById('login-form');
-    if (loginForm) {
-        loginForm.addEventListener('submit', function (event) {
-            event.preventDefault();
-
-            // Collect the user's input
-            const email = document.getElementById('login-email').value;
-            const password = document.getElementById('login-password').value;
-
-            // Check if the email exists and the password matches
-            if (users[email] && users[email].password === password) {
-                const userType = users[email].type;
-                alert('Login successful!');
-
-                // Redirect user based on their role
-                if (userType === "counselor") {
-                    window.location.href = "console.html"; // Redirect to counselor's portal
-                } else if (userType === "employer") {
-                    window.location.href = "index.html"; // Redirect to employer's portal
-                } else if (userType === "student") {
-                    window.location.href = "portfolio.html"; // Redirect to student's portal
-                }
-            } else {
-                alert('Invalid email or password!');
-            }
-        });
+    if (accountType !== 2) {
+        consoleContent.style.filter = "blur(10px)";
+        const lockMessage = document.createElement("p")
+        lockMessage.style.textAlign = "center"
+        lockMessage.style.fontSize = "24px"
+        lockMessage.innerText = "🔒 This console is for counselors only."
+        consoleContent.appendChild(lockMessage)
     }
-});
+}
+
+function getUserAccountType() {
+    const loggedInUser = localStorage.getItem('email')
+    const user = users.find(u => u.email === loggedInUser)
+    return user.type
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('login-button').addEventListener('click', function() {
+        window.location.href = 'portal.html';
+    })
+})
+
+document.getElementById('login-form').addEventListener('submit', handleLogin)
