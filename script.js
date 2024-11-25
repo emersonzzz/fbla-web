@@ -8,18 +8,20 @@ const users = [
         birthday: 703788000,           // SAVED AS UNIX TIMESTAMP
         type: 0,                       // STUDENT
         admin: false,                  // NOT ADMIN
-        verified: false                // EMAIL HAS NOT BEEN VERIFIED
+        verified: false,                // EMAIL HAS NOT BEEN VERIFIED
+        icon: 'assets/img/emerson-reinhard.png'
     },
     {
         email: 'employer@jobify.com',  // MAIN KEY
         password: 'employer5678',      // NEEDS TO BE HASHED
-        first: 'Walmart',              // FIRST NAME
-        middle: '',                    // MIDDLE INITIAL
-        last: 'Fulton',                      // LAST NAME
+        first: 'Marco',                // FIRST NAME
+        middle: 'C',                   // MIDDLE INITIAL
+        last: 'Bennettini',            // LAST NAME
         birthday: 484473600,           // SAVED AS UNIX TIMESTAMP
         type: 1,                       // EMPLOYER
         admin: false,                  // NOT ADMIN
-        verified: true                 // EMAIL HAS BEEN VERIFIED
+        verified: true,                 // EMAIL HAS BEEN VERIFIED
+        icon: 'assets/img/avatar.png'
     },
     {
         email: 'counselor@jobify.com', // MAIN KEY
@@ -30,7 +32,8 @@ const users = [
         birthday: 315532800,           // SAVED AS UNIX TIMESTAMP
         type: 2,                       // COUNSELOR
         admin: true,                   // IS ADMIN
-        verified: true                 // EMAIL HAS BEEN VERIFIED
+        verified: true,                 // EMAIL HAS BEEN VERIFIED
+        icon: 'assets/img/mr-randolph.png'
     }
 ]
 
@@ -54,6 +57,7 @@ function navbarShowProfile(email) {
     document.getElementById('right-items').style.display = 'none'
     document.getElementById('user-profile').style.display = 'flex'
     document.getElementById('user-name').textContent = `${user.first} ${Array.from(user.last)[0]}.`
+    document.getElementById('profile-pic').src = user.icon
 }
 
 function handleLogin(event) {
@@ -109,7 +113,7 @@ function securityCheck() {
     const consoleContent = document.getElementById("hero-section")
 
     if (accountType !== 2) {
-        consoleContent.style.filter = "blur(10px)";
+        consoleContent.style.filter = "blur(20px)";
         const lockMessage = document.createElement("p")
         lockMessage.style.textAlign = "center"
         lockMessage.style.fontSize = "24px"

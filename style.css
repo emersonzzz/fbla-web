@@ -38,6 +38,7 @@ div {
     border: 0px;
     border-bottom: 1px;
     width: 100%;
+    filter: none !important;
 }
 
 .itemcontainer {
@@ -510,4 +511,8 @@ ol, ul, menu {
 .check-icon {
     fill: #9195ab;
     cursor: pointer;
+}
+
+#hero-section p {
+    z-index: 9999;
 }
