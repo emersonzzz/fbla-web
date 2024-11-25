@@ -36,7 +36,8 @@ const users = [
 
 window.onload = function() {
     const loggedInUser = localStorage.getItem('email')
-    if (loggedInUser) {
+    const loggedInPassword = localStorage.getItem('password')
+    if (loggedInUser && (users.find(u => u.email === loggedInUser).password == loggedInPassword)) {
         navbarShowProfile(loggedInUser)
     } else {
         navbarShowLogin()
@@ -76,6 +77,7 @@ function handleLogin(event) {
     }
 
     localStorage.setItem('email', email);
+    localStorage.setItem('password', user.password)
 
     navbarShowProfile(email);
 
@@ -84,6 +86,7 @@ function handleLogin(event) {
 
 function logout() {
     localStorage.removeItem('email')
+    localStorage.removeItem('password')
     window.location.href = 'index.html'
 }
 
