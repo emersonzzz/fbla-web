@@ -111,6 +111,7 @@
                 } else {
                     // If login is successful, store email in localStorage
                     localStorage.setItem('email', email);
+                    localStorage.setItem('password', user.password)
                     console.log(`saved as ${user.email} to local storage`)
 
                     // Redirect user to home page
