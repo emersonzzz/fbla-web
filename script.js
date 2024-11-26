@@ -37,6 +37,64 @@ const users = [
     }
 ]
 
+const articles = [
+    {
+        title: 'How to Build Your Resume',
+        blurb: 'Learn the essentials of creating a standout resume. From listing your experiences to showcasing your skills, this guide helps you craft a document that reflects your strengths and sets you up for success in your job search.',
+        emoji: '📄',
+        author: 'Mrs. Crawford',
+    },
+    {
+        title: 'Setting Yourself Apart',
+        blurb: 'Discover how to differentiate yourself in a competitive job market. This article explores strategies like developing a unique personal brand, acquiring valuable skills, and demonstrating initiative to make a lasting impression on potential employers.',
+        emoji: '🌟',
+        author: 'Mrs. Bradshaw',
+    },
+    {
+        title: 'Nailing the Job Interview',
+        blurb: 'Master the art of the job interview with practical tips on preparation, body language, and responding to tough questions. This article helps you build confidence and improve your chances of landing your dream job.',
+        emoji: '🎤',
+        author: 'Bradshaw, Crawford, et al.',
+    },
+    {
+        title: 'The Importance of Networking',
+        blurb: 'Networking is more than just making connections—it’s about building meaningful relationships that can open doors to opportunities. Learn how to effectively network both online and offline to expand your career prospects.',
+        emoji: '🤝',
+        author: 'Jobify Articles',
+    },
+    {
+        title: 'Finding Your Career Path',
+        blurb: 'This article offers guidance on how to identify your interests and strengths, helping you navigate your career journey. With advice on exploring industries, internships, and further education, you\'ll be better equipped to choose a path that aligns with your goals.',
+        emoji: '🛤️',
+        author: 'Jobify Articles',
+    },
+    {
+        title: 'Volunteering: Great Ways to Gain Experience',
+        blurb: 'Volunteering can be a powerful way to build your resume, gain hands-on experience, and develop transferable skills. Explore the benefits of volunteering and how it can enhance your career prospects, even if you\'re still in school.',
+        emoji: '🤗',
+        author: 'Jobify Articles',
+    },
+    {
+        title: 'Balancing School and Work',
+        blurb: 'Learn how to successfully juggle the demands of school and work. This article offers time management tips and advice on setting boundaries to ensure that you thrive academically and professionally without burning out.',
+        emoji: '⚖️',
+        author: 'Jobify Articles',
+    },
+    {
+        title: 'Employer\'s Choice: What They Look For',
+        blurb: 'What do employers value most when hiring? This article outlines key qualities and skills employers seek in candidates, from adaptability to communication abilities, helping you tailor your resume and interview responses to meet their expectations.',
+        emoji: '🧐',
+        author: 'Jobify Articles',
+    },
+    {
+        title: 'Learning From Rejections',
+        blurb: 'Rejections are an inevitable part of the job search process, but they can also be valuable learning experiences. Discover how to use feedback and self-reflection to improve your approach and increase your chances of success in future applications.',
+        emoji: '💪',
+        author: 'Jobify Articles',
+    },
+    
+]
+
 window.onload = function() {
     const loggedInUser = localStorage.getItem('email')
     const loggedInPassword = localStorage.getItem('password')
