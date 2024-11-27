@@ -351,6 +351,7 @@ ol, ul, menu {
     font-weight: 600;
     text-align: center;
     padding: 20px;
+    text-decoration: none;
 }
 
 #articles-list .article h5 {
@@ -366,7 +367,7 @@ ol, ul, menu {
 }
 
 #article-list .article a {
-    text-decoration: none;
+    text-decoration: none !important;
     color: black;
 }
 
@@ -382,6 +383,11 @@ ol, ul, menu {
     margin-top: -20px;
     justify-content: center;
     padding: 40px;
+}
+
+#resources-section a {
+    text-decoration: none;
+    color: black
 }
 
 #articles-list {
@@ -534,4 +540,22 @@ ol, ul, menu {
 
 #hero-section p {
     z-index: 9999;
+}
+
+.sticky-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 75px;
+    height: 75px;
+    border: none;
+    border-radius: 50%;
+    background-color: #28753d;
+    color: white;
+    font-size: 64px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    font-weight: 100;
 }
