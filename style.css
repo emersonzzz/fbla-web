@@ -542,6 +542,12 @@ ol, ul, menu {
     z-index: 9999;
 }
 
+#forbidden-access {
+    background-color: white;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+}
+
 .sticky-button {
     position: fixed;
     bottom: 20px;

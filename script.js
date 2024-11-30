@@ -21,7 +21,7 @@ const users = [
         type: 1,                       // EMPLOYER
         admin: false,                  // NOT ADMIN
         verified: true,                 // EMAIL HAS BEEN VERIFIED
-        icon: 'assets/img/avatar.png'
+        icon: 'assets/img/marco-bennettini.png'
     },
     {
         email: 'counselor@jobify.com', // MAIN KEY
@@ -99,7 +99,9 @@ window.onload = function() {
     const loggedInUser = localStorage.getItem('email')
     const loggedInPassword = localStorage.getItem('password')
     if (loggedInUser && (users.find(u => u.email === loggedInUser).password == loggedInPassword)) {
+        console.log('showing profile')
         navbarShowProfile(loggedInUser)
+        consoleContactButton()
     } else {
         navbarShowLogin()
     }
@@ -168,15 +170,15 @@ function filterArticles() {
 
 function securityCheck() {
     const accountType = getUserAccountType();
-    const consoleContent = document.getElementById("hero-section")
+    const consoleContent = document.getElementById("root")
+    const accessDenied = document.getElementById("forbidden-access")
+    const body = accessDenied.parentNode
 
-    if (accountType !== 2) {
-        consoleContent.style.filter = "blur(20px)";
-        const lockMessage = document.createElement("p")
-        lockMessage.style.textAlign = "center"
-        lockMessage.style.fontSize = "24px"
-        lockMessage.innerText = "🔒 This console is for counselors only."
-        consoleContent.appendChild(lockMessage)
+    if (accountType === 2) {
+        accessDenied.remove()
+    } else {
+        consoleContent.remove()
+        body.remove()
     }
 }
 
@@ -185,6 +187,19 @@ function getUserAccountType() {
     const user = users.find(u => u.email === loggedInUser)
     return user.type
 }
+
+function consoleContactButton() {
+    console.log('console contact checking...')
+    const accountType = getUserAccountType();
+
+    if (accountType === 2) {
+        console.log('counselor, showing console')
+        const ccButton = document.getElementById('contact-console')
+        ccButton.textContent = 'Console'
+        ccButton.href = 'console.html'
+    }
+}
+
 
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('login-button').addEventListener('click', function() {
