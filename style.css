@@ -14,7 +14,7 @@ body {
     padding: 0;
     height: 100%;
     font-weight: 400;
-    font-family: 'Montserrat', sans-serif!important;
+    font-family: 'Raleway', sans-serif!important;
     font-size: 14px;
     color: #ffffffb3;
     margin: 0 auto;
@@ -268,7 +268,7 @@ ol, ul, menu {
 }
 
 .portal-forms input {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Raleway', sans-serif;
     color: #fff;
     padding-left: 20px;
     padding-top: 10px;
@@ -305,7 +305,7 @@ ol, ul, menu {
     border: none;
     background-color: #28753d;
     width: 100%;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Raleway', sans-serif;
     color: #78f099;
     padding: 10px;
     margin-top: 10px;
@@ -328,7 +328,7 @@ ol, ul, menu {
 }
 
 .hero-section input {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-size: 1.5rem;
     font-weight: 300;
     background-color: #fff;
@@ -366,7 +366,7 @@ ol, ul, menu {
     font-size: .75rem;
 }
 
-#article-list .article a {
+#articles-list .article a {
     text-decoration: none !important;
     color: black;
 }
@@ -383,6 +383,10 @@ ol, ul, menu {
     margin-top: -20px;
     justify-content: center;
     padding: 40px;
+}
+
+#user-profile:hover #dropdown-menu {
+    display: block;
 }
 
 #resources-section a {
@@ -519,10 +523,6 @@ ol, ul, menu {
     border-radius: 1rem;
 }
 
-/* Show the dropdown when hovering over the profile */
-#user-profile:hover #dropdown-menu {
-    display: block;
-}
 
 /* Hide login and signup buttons when logged in */
 #auth-buttons {
@@ -564,4 +564,67 @@ ol, ul, menu {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s, box-shadow 0.2s;
     font-weight: 100;
+}
+
+#console-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(216px, 1fr));
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+    width: 100%;
+    max-width: 1240px;
+    margin: 57px auto 60px auto;
+    justify-items: center;
+    font-size: 23px;
+    font-weight: 700;
+    text-align: center;
+    color: #000
+}
+
+.console-list h1 {
+    font-size: 70px;
+    font-weight: 700;
+    text-align: center;
+    color: #000;
+    margin-top: 0px;
+    margin-bottom: 30px;
+}
+
+#console-list .option {
+    background-color: #e3e3e5;
+    border-bottom: 1px solid #ccc;
+    border-radius: 1rem;
+    width: 100%;
+    max-width: 246px;
+    font-size: 18px;
+    color: #1c1c1a;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    text-align: center;
+    padding: 20px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
+
+#console-list .option h5 {
+    font-size: 2rem;
+    margin-top: 0px;
+    margin: 20px;
+    margin-top: -5px
+}
+
+#console-list .option p {
+    font-weight: 400;
+    font-size: .75rem;
+}
+
+#console-list .option h4 {
+    text-decoration: none !important;
+    color: black;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0
 }

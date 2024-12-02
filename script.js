@@ -169,6 +169,16 @@ function filterArticles() {
 }
 
 function securityCheck() {
+    const loggedInUser = localStorage.getItem('email')
+    const loggedInPassword = localStorage.getItem('password')
+    if (loggedInUser && (users.find(u => u.email === loggedInUser).password == loggedInPassword)) {
+        console.log('showing profile')
+        navbarShowProfile(loggedInUser)
+        consoleContactButton()
+    } else {
+        navbarShowLogin()
+    }
+
     const accountType = getUserAccountType();
     const consoleContent = document.getElementById("root")
     const accessDenied = document.getElementById("forbidden-access")
@@ -178,14 +188,36 @@ function securityCheck() {
         accessDenied.remove()
     } else {
         consoleContent.remove()
-        body.remove()
+    }
+}
+
+function removeAddListing() {
+    const loggedInUser = localStorage.getItem('email')
+    const loggedInPassword = localStorage.getItem('password')
+    if (loggedInUser && (users.find(u => u.email === loggedInUser).password == loggedInPassword)) {
+        console.log('showing profile')
+        navbarShowProfile(loggedInUser)
+        consoleContactButton()
+    } else {
+        navbarShowLogin()
+    }
+
+    const accountType = getUserAccountType()
+    const addListingButton = document.getElementById('add-listing')
+
+    if (!(accountType === 1 || accountType === 2)) {
+        addListingButton.remove()
     }
 }
 
 function getUserAccountType() {
     const loggedInUser = localStorage.getItem('email')
     const user = users.find(u => u.email === loggedInUser)
-    return user.type
+    if (!user) {
+        return -1
+    } else {
+        return user.type
+    }
 }
 
 function consoleContactButton() {
