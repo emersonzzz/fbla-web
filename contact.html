@@ -65,14 +65,64 @@
                 <h3>Both students and listers will be able to contact counselors here</h3>
             </div>
             <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" id="wave" style="transform:rotate(0deg); transition: 0.3s; display: block; line-height: 0px; margin-bottom: -1px" viewBox="0 0 1440 100" version="1.1"><defs/><path style="transform:translate(0, 0px); opacity:1" fill="#f3ecea" d="M0,0L40,8.3C80,17,160,33,240,33.3C320,33,400,17,480,11.7C560,7,640,13,720,13.3C800,13,880,7,960,13.3C1040,20,1120,40,1200,45C1280,50,1360,40,1440,38.3C1520,37,1600,43,1680,40C1760,37,1840,23,1920,30C2000,37,2080,63,2160,63.3C2240,63,2320,37,2400,23.3C2480,10,2560,10,2640,11.7C2720,13,2800,17,2880,18.3C2960,20,3040,20,3120,23.3C3200,27,3280,33,3360,45C3440,57,3520,73,3600,71.7C3680,70,3760,50,3840,46.7C3920,43,4000,57,4080,65C4160,73,4240,77,4320,65C4400,53,4480,27,4560,25C4640,23,4720,47,4800,58.3C4880,70,4960,70,5040,61.7C5120,53,5200,37,5280,35C5360,33,5440,47,5520,50C5600,53,5680,47,5720,43.3L5760,40L5760,100L5720,100C5680,100,5600,100,5520,100C5440,100,5360,100,5280,100C5200,100,5120,100,5040,100C4960,100,4880,100,4800,100C4720,100,4640,100,4560,100C4480,100,4400,100,4320,100C4240,100,4160,100,4080,100C4000,100,3920,100,3840,100C3760,100,3680,100,3600,100C3520,100,3440,100,3360,100C3280,100,3200,100,3120,100C3040,100,2960,100,2880,100C2800,100,2720,100,2640,100C2560,100,2480,100,2400,100C2320,100,2240,100,2160,100C2080,100,2000,100,1920,100C1840,100,1760,100,1680,100C1600,100,1520,100,1440,100C1360,100,1280,100,1200,100C1120,100,1040,100,960,100C880,100,800,100,720,100C640,100,560,100,480,100C400,100,320,100,240,100C160,100,80,100,40,100L0,100Z"/></svg>
-            <div class="support-reasons">
-                <button class="contact-button">General Support<h3>You aren't alone.</h3></button>
-                <button class="contact-button">Arrange Meeting</button>
-                <button class="contact-button">Mental Health Support</button>
-                <button class="contact-button">Relationship Counseling</button>
-                <button class="contact-button">Tip Line</button>
-                <button class="contact-button">Financial Guidance</button>
+            <div class="hero-listings">
+                <div id="console-list" style="margin-top: 0">
+                    <button class="option">
+                        <h5>🎫</h5>
+                        <h4 href="resources.html" style="text-decoration: none;">General Support</h4>
+                        <p>Contact our counselors with any questions or concerns you have!</p>
+                    </button>
+                    <button class="option">
+                        <h5>🗓️</h5>
+                        <h4 href="resources.html" style="text-decoration: none;">Arrange Meeting</h4>
+                        <p>Set up a time to talk with one of our counselors in person!</p>
+                    </button>
+                    <button class="option">
+                        <h5>🫂</h5>
+                        <h4 href="resources.html" style="text-decoration: none;">Mental Health Support</h4>
+                        <p>You aren't alone. We are here to talk if you need!</p>
+                    </button>
+                    <button class="option">
+                        <h5>💞</h5>
+                        <h4 href="resources.html" style="text-decoration: none;">Relationship Counseling</h4>
+                        <p>Let us help you balance your relationship and personal life!</p>
+                    </button>
+                    <button class="option">
+                        <h5>🕵🏻</h5>
+                        <h4 href="resources.html" style="text-decoration: none;">Tip Line</h4>
+                        <p>Report something to us with complete anonymity.</p>
+                    </button>
+                    <button class="option">
+                        <h5>💸</h5>
+                        <h4 href="resources.html" style="text-decoration: none;">Financial Guideance</h4>
+                        <p>Ask us financial questions or let us know if you need financial assistance.</p>
+                    </button>
+                </div>
+
+                <div id="modal-overlay">
+                    <div id="general-support" class="modal">
+                        <h2>General Support</h2>
+                        <h6 style="margin: 10px; margin-bottom: 1rem;">Required fields are marked with a <span style="color: red; font-size: 20px;">*</span></h6>
+                        <form onsubmit="submitTicket(event)" style="align-items: center;">
+                            <h5>Name<span style="color: red; font-size: 20px;">*</span></h5>
+                            <input type="name" id="general-support-name" placeholder="" required>
+
+                            <h5 style="margin-top: 1rem;">Email<span style="color: red; font-size: 20px;">*</span></h5>
+                            <input type="email" id="general-support-email" placeholder="" required>
+
+                            <h5 style="margin-top: 1rem;">Subject<span style="color: red; font-size: 20px;">*</span></h5>
+                            <input type="subject" id="general-support-subject" placeholder="" required>
+
+                            <h5 style="margin-top: 1rem;">Message<span style="color: red; font-size: 20px;">*</span></h5>
+                            <input type="message" id="general-support-message" placeholder="" style="height: 100px;" required>
+                            <div style="display: flex; justify-content: center;">
+                                <button style="width: 50%; border-radius: 1rem; border: none; cursor: pointer; height: 2.5rem; margin-top: 10px; font-family: 'Montserrat', sans-serif; color: white; background-color: green; font-size: 1rem;">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
+
             <div class="hero-listings">
                 <h1>Roadmap: Coming Next...</h1>
                 <ul>
