@@ -77,8 +77,8 @@
                         <h4 href="resources.html" style="text-decoration: none;">Arrange Meeting</h4>
                         <p>Set up a time to talk with one of our counselors in person!</p>
                     </button>
-                    <button class="option">
-                        <h5>🫂</h5>
+                    <button class="option" id="mental-health">
+                        <h5>🤗</h5>
                         <h4 href="resources.html" style="text-decoration: none;">Mental Health Support</h4>
                         <p>You aren't alone. We are here to talk if you need!</p>
                     </button>
@@ -100,7 +100,7 @@
                 </div>
 
                 <div id="modal-overlay">
-                    <div id="general-support" class="modal">
+                    <div id="general-support" class="modal hidden">
                         <h2>General Support</h2>
                         <h6 style="margin: 10px; margin-bottom: 1rem;">Required fields are marked with a <span style="color: red; font-size: 20px;">*</span></h6>
                         <form onsubmit="submitTicket(event)" style="align-items: center;">
@@ -115,6 +115,46 @@
 
                             <h5 style="margin-top: 1rem;">Message<span style="color: red; font-size: 20px;">*</span></h5>
                             <input type="message" id="general-support-message" placeholder="" style="height: 100px;" required>
+                            <div style="display: flex; justify-content: center;">
+                                <button style="width: 50%; border-radius: 1rem; border: none; cursor: pointer; height: 2.5rem; margin-top: 10px; font-family: 'Montserrat', sans-serif; color: white; background-color: green; font-size: 1rem;" id="general-support-submit">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div id="arrange-meeting" class="modal hidden">
+                        <h2>Arrange Meeting</h2>
+                        <h6 style="margin: 10px; margin-bottom: 1rem;">Required fields are marked with a <span style="color: red; font-size: 20px;">*</span></h6>
+                        <form onsubmit="submitTicket(event)" style="align-items: center;">
+                            <h5>Name<span style="color: red; font-size: 20px;">*</span></h5>
+                            <input type="name" id="arrange-meeting-name" placeholder="" required>
+
+                            <h5 style="margin-top: 1rem;">Email<span style="color: red; font-size: 20px;">*</span></h5>
+                            <input type="email" id="arrange-meeting-email" placeholder="" required>
+
+                            <h5 style="margin-top: 1rem;">What do you need to talk about?<span style="color: red; font-size: 20px;">*</span></h5>
+                            <input type="discuss" id="arrange-meeting-discuss" placeholder="" required>
+
+                            <h5 style="margin-top: 1rem;">When works best for you?<span style="color: red; font-size: 20px;">*</span></h5>
+                            <input type="time" id="arrange-meeting-time" placeholder="" required>
+                            <div style="display: flex; justify-content: center;">
+                                <button style="width: 50%; border-radius: 1rem; border: none; cursor: pointer; height: 2.5rem; margin-top: 10px; font-family: 'Montserrat', sans-serif; color: white; background-color: green; font-size: 1rem;" id="general-support-submit">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div id="mental-health-support" class="modal">
+                        <h2>Mental Health Support</h2>
+                        <h6 style="margin: 10px; margin-bottom: 1rem;">Required fields are marked with a <span style="color: red; font-size: 20px;">*</span></h6>
+                        <form onsubmit="submitTicket(event)" style="align-items: center;">
+                            <h5>Name<span style="color: red; font-size: 20px;">*</span></h5>
+                            <input type="name" id="mental-health-name" placeholder="" required>
+
+                            <h5 style="margin-top: 1rem;">Email<span style="color: red; font-size: 20px;">*</span></h5>
+                            <input type="email" id="mental-health-email" placeholder="" required>
+
+                            <h5 style="margin-top: 1rem;">What's on your mind?<span style="color: red; font-size: 20px;">*</span></h5>
+                            <input type="subject" id="mental-health-message" style="height: 100px;" placeholder="" required>
+
+                            <h5 style="margin-top: 1rem;">Anything else we need to know?</h5>
+                            <input type="subject" id="mental-health-additional" placeholder="">
                             <div style="display: flex; justify-content: center;">
                                 <button style="width: 50%; border-radius: 1rem; border: none; cursor: pointer; height: 2.5rem; margin-top: 10px; font-family: 'Montserrat', sans-serif; color: white; background-color: green; font-size: 1rem;" id="general-support-submit">Submit</button>
                             </div>

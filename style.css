@@ -667,3 +667,7 @@ ol, ul, menu {
 .modal input {
     width: 100%
 }
+
+.hidden {
+    display: none;
+}

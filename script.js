@@ -255,3 +255,65 @@ document.addEventListener('DOMContentLoaded', function() {
 document.getElementById("general-support-submit").addEventListener("click", function() {
     document.getElementById("modal-overlay").style.display = "none"; // Hide modal
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Wait for the DOM to load
+document.addEventListener('DOMContentLoaded', () => {
+    console.log('PRESSED BUTTON I THINK')
+    const mentalHealthButton = document.getElementById('mental-health');
+    const mentalHealthModal = document.getElementById('mental-health-support');
+    const modalOverlay = document.getElementById('modal-overlay');
+
+    // Event listener to show the modal when the button is clicked
+    mentalHealthButton.addEventListener('click', () => {
+        mentalHealthModal.classList.remove('hidden'); // Show the modal
+        modalOverlay.classList.remove('hidden'); // Show the modal overlay
+    });
+
+    // Optional: Close the modal when clicking outside of it
+    modalOverlay.addEventListener('click', () => {
+        mentalHealthModal.classList.add('hidden'); // Hide the modal
+        modalOverlay.classList.add('hidden'); // Hide the overlay
+    });
+});
