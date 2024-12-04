@@ -233,6 +233,7 @@ function consoleContactButton() {
 }
 
 function submitTicket(event) {
+    event.preventDefault()
     console.log(`SUBMITTED ${event.Array}`)
 }
 
