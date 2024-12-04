@@ -232,6 +232,9 @@ function consoleContactButton() {
     }
 }
 
+function submitTicket(event) {
+    console.log(`SUBMITTED ${event.Array}`)
+}
 
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('login-button').addEventListener('click', function() {
@@ -239,4 +242,6 @@ document.addEventListener('DOMContentLoaded', function() {
     })
 })
 
-document.getElementById('login-form').addEventListener('submit', handleLogin)
+document.getElementById("general-support-submit").addEventListener("click", function() {
+    document.getElementById("modal-overlay").style.display = "none"; // Hide modal
+});
