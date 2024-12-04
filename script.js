@@ -233,8 +233,17 @@ function consoleContactButton() {
 }
 
 function submitTicket(event) {
-    event.preventDefault()
+    event.preventDefault();
     console.log(`SUBMITTED ${event.Array}`)
+    document.getElementById("modal-overlay").style.display = "none";
+    const ticketInfo = {
+        name: document.getElementById("general-support-name").value,
+        email: document.getElementById("general-support-email").value,
+        subject: document.getElementById("general-support-subject").value,
+        message: document.getElementById("general-support-message").value,
+    }
+
+    console.log(`Name: ${ticketInfo.name}\nEmail: ${ticketInfo.email}\nSubject: ${ticketInfo.subject}\nMessage: ${ticketInfo.message}`)
 }
 
 document.addEventListener('DOMContentLoaded', function() {
