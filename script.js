@@ -300,13 +300,13 @@ document.getElementById("general-support-submit").addEventListener("click", func
 
 // Wait for the DOM to load
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('PRESSED BUTTON I THINK')
     const mentalHealthButton = document.getElementById('mental-health');
     const mentalHealthModal = document.getElementById('mental-health-support');
     const modalOverlay = document.getElementById('modal-overlay');
 
     // Event listener to show the modal when the button is clicked
     mentalHealthButton.addEventListener('click', () => {
+        console.log('PRESSED BUTTON I THINK')
         mentalHealthModal.classList.remove('hidden'); // Show the modal
         modalOverlay.classList.remove('hidden'); // Show the modal overlay
     });
