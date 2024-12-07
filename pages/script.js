@@ -246,6 +246,10 @@ function submitTicket(event) {
     console.log(`Name: ${ticketInfo.name}\nEmail: ${ticketInfo.email}\nSubject: ${ticketInfo.subject}\nMessage: ${ticketInfo.message}`)
 }
 
+function openTicket(category) { // GS = 0, AM = 1, MH = 2, RC = 3, TL = 4, FG = 5
+    
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('login-button').addEventListener('click', function() {
         window.location.href = 'portal.html';
