@@ -31,11 +31,23 @@ h6 {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Segoe UI", Arial, sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-weight: 400;
     margin: 10px 0;
 }.wide {
     letter-spacing: 4px;
+}
+
+/* Extracted from fontawesome.css */
+
+.fa {
+    display: inline-block;
+    font-size: inherit;
+    text-rendering: auto;
+}
+
+.fa-2x {
+    font-size: 2em;
 }
 
 
