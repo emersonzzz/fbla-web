@@ -253,7 +253,7 @@ ol, ul, menu {
 
 .portal-forms h3 {
     font-size: 20px;
-    font-weight: 200;
+    font-weight: 600;
     text-align: center;
     color: #9195ab;
     margin-top: 10px;
@@ -276,10 +276,11 @@ ol, ul, menu {
     font-weight: 100;
     max-width: 100%;
     width: 100%;
+    font-weight: 600;
 }
 
 .portal-forms a {
-    font-weight: 200;
+    font-weight: 400;
     text-decoration: none;
     color: #78f099;
     display: inline;
@@ -321,7 +322,7 @@ ol, ul, menu {
 }
 
 .portal-forms h4 {
-    font-weight: 100;
+    font-weight: 400;
     text-align: left;
     color: #9195ab;
     display: inline;
@@ -670,4 +671,32 @@ ol, ul, menu {
 
 .hidden {
     display: none;
+}
+
+#listings-page .listing {
+    background-color: #e3e3e5;
+    border-bottom: 1px solid #ccc;
+    border-radius: 1rem;
+    width: 100%;
+    max-width: 246px;
+    font-size: 18px;
+    color: #1c1c1a;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    text-align: center;
+    padding: 20px;
+    text-decoration: none;
+}
+
+#listings-page {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(216px, 1fr));
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+    width: 100%;
+    max-width: 1240px;
+    margin: 57px auto 60px auto;
+    justify-items: center;
 }
