@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <title>Jobify × Portfolio</title>
+        <link rel="stylesheet" href="./style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="icon" type="image/x-icon" href="assets/img/jobify.png">
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <div id="root">
+            <div class="topnav">
+                <div class="itemcontainer transition-all">
+                    <div class="left-items">
+                        <a aria-current="page" class="active" href="index.html">
+                            <div class="logo">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#000000"><path d="M9.16488 17.6505C8.92513 17.8743 8.73958 18.0241 8.54996 18.1336C7.62175 18.6695 6.47816 18.6695 5.54996 18.1336C5.20791 17.9361 4.87912 17.6073 4.22153 16.9498C3.56394 16.2922 3.23514 15.9634 3.03767 15.6213C2.50177 14.6931 2.50177 13.5495 3.03767 12.6213C3.23514 12.2793 3.56394 11.9505 4.22153 11.2929L7.04996 8.46448C7.70755 7.80689 8.03634 7.47809 8.37838 7.28062C9.30659 6.74472 10.4502 6.74472 11.3784 7.28061C11.7204 7.47809 12.0492 7.80689 12.7068 8.46448C13.3644 9.12207 13.6932 9.45086 13.8907 9.7929C14.4266 10.7211 14.4266 11.8647 13.8907 12.7929C13.7812 12.9825 13.6314 13.1681 13.4075 13.4078M10.5919 10.5922C10.368 10.8319 10.2182 11.0175 10.1087 11.2071C9.57284 12.1353 9.57284 13.2789 10.1087 14.2071C10.3062 14.5492 10.635 14.878 11.2926 15.5355C11.9502 16.1931 12.279 16.5219 12.621 16.7194C13.5492 17.2553 14.6928 17.2553 15.621 16.7194C15.9631 16.5219 16.2919 16.1931 16.9495 15.5355L19.7779 12.7071C20.4355 12.0495 20.7643 11.7207 20.9617 11.3787C21.4976 10.4505 21.4976 9.30689 20.9617 8.37869C20.7643 8.03665 20.4355 7.70785 19.7779 7.05026C19.1203 6.39267 18.7915 6.06388 18.4495 5.8664C17.5212 5.3305 16.3777 5.3305 15.4495 5.8664C15.2598 5.97588 15.0743 6.12571 14.8345 6.34955" stroke="#7e8e95" stroke-width="2" stroke-linecap="round"/></svg>
+                            </div>
+                        </a>
+                        <ul class="left-menu">
+                            <li class="left-menu-item">
+                                <a class="menu-button" href="listings.html">
+                                    Listings                                    
+                                </a>
+                            </li>
+                            <li class="left-menu-item">
+                                <a class="menu-button" href="resources.html">
+                                    Resources                                   
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="right-items" id="right-items">
+                        <a class="menu-button" id="contact-console-logged-out" style="margin-right: 0" href="contact.html">
+                            Contact
+                        </a>
+                        <button id="login-button" class="pill-button login-button">Login</button>
+                        <button id="signup-button" class="pill-button login-button">Sign Up</button>
+                    </div>
+                    <div class="user-profile" id="user-profile">
+                        <a class="menu-button" id="contact-console" style="margin-left: auto; margin-right: 30px" href="contact.html">
+                            Contact
+                        </a>
+                        <img src="assets/img/avatar.png" alt="Profile" class="profile-pic" id="profile-pic">
+                        <span id="user-name"></span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="check-icon">
+                            <path d="M12 17.414 3.293 8.707l1.414-1.414L12 14.586l7.293-7.293 1.414 1.414L12 17.414z"/>
+                        </svg>
+                        <div class="dropdown-menu" id="dropdown-menu">
+                            <ul>
+                                <li><a href="portfolio.html">Portfolio</a></li>
+                                <li><a href="settings.html">Settings</a></li>
+                                <li><a href="announcements.html">Announcements</a></li>
+                                <li><a onclick="logout()" style="color: red;">Logout</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-section">
+                <h1>PORTFOLIO PAGE</h1>
+                <h3>User dashboard, for employers to view and to list detailed information</h3>
+            </div>
+            <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" id="wave" style="transform:rotate(0deg); transition: 0.3s; display: block; line-height: 0px; margin-bottom: -1px" viewBox="0 0 1440 100" version="1.1"><defs/><path style="transform:translate(0, 0px); opacity:1" fill="#f3ecea" d="M0,0L40,8.3C80,17,160,33,240,33.3C320,33,400,17,480,11.7C560,7,640,13,720,13.3C800,13,880,7,960,13.3C1040,20,1120,40,1200,45C1280,50,1360,40,1440,38.3C1520,37,1600,43,1680,40C1760,37,1840,23,1920,30C2000,37,2080,63,2160,63.3C2240,63,2320,37,2400,23.3C2480,10,2560,10,2640,11.7C2720,13,2800,17,2880,18.3C2960,20,3040,20,3120,23.3C3200,27,3280,33,3360,45C3440,57,3520,73,3600,71.7C3680,70,3760,50,3840,46.7C3920,43,4000,57,4080,65C4160,73,4240,77,4320,65C4400,53,4480,27,4560,25C4640,23,4720,47,4800,58.3C4880,70,4960,70,5040,61.7C5120,53,5200,37,5280,35C5360,33,5440,47,5520,50C5600,53,5680,47,5720,43.3L5760,40L5760,100L5720,100C5680,100,5600,100,5520,100C5440,100,5360,100,5280,100C5200,100,5120,100,5040,100C4960,100,4880,100,4800,100C4720,100,4640,100,4560,100C4480,100,4400,100,4320,100C4240,100,4160,100,4080,100C4000,100,3920,100,3840,100C3760,100,3680,100,3600,100C3520,100,3440,100,3360,100C3280,100,3200,100,3120,100C3040,100,2960,100,2880,100C2800,100,2720,100,2640,100C2560,100,2480,100,2400,100C2320,100,2240,100,2160,100C2080,100,2000,100,1920,100C1840,100,1760,100,1680,100C1600,100,1520,100,1440,100C1360,100,1280,100,1200,100C1120,100,1040,100,960,100C880,100,800,100,720,100C640,100,560,100,480,100C400,100,320,100,240,100C160,100,80,100,40,100L0,100Z"/></svg>
+            <div class="hero-listings">
+                <h1>Roadmap: Coming Next...</h1>
+                <ul>
+                    <li>Create a way to view these by id</li>
+                    <li>Make a way for students to edit these</li>
+                    <li>Create a filter to prevent trolls creating accounts</li>
+                    <li>Create a way to report these (maybe merge into contact page??)</li>
+                    <li>See how to make messaging between employers and students (if allowed)</li>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>
