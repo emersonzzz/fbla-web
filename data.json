@@ -1,0 +1,41 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "email": "student@jobify.com",
+            "password": "student1234",
+            "first": "Emerson",
+            "middle": "K",
+            "last": "Reinhard",
+            "birthday": 703788000,
+            "type": 0,
+            "admin": false,
+            "verified": false,
+            "icon": "assets/img/emerson-reinhard.png"
+        },
+        {
+            "email": "employer@jobify.com",
+            "password": "employer5678",
+            "first": "Marco",
+            "middle": "C",
+            "last": "Bennettini",
+            "birthday": 484473600,
+            "type": 1,
+            "admin": false,
+            "verified": true,
+            "icon": "assets/img/marco-bennettini.png"
+        },
+        {
+            "email": "counselor@jobify.com",
+            "password": "counselor90",
+            "first": "Marena",
+            "middle": "",
+            "last": "Crawford",
+            "birthday": 315532800,
+            "type": 2,
+            "admin": true,
+            "verified": true,
+            "icon": "assets/img/mr-randolph.png"
+        }
+    ]
+}
